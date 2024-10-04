@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diario de Salud Personal</title>
+    <link href="./css/tailwind.min.css" rel="stylesheet">
+
+<body class="bg-gray-100">
+
+    <div class="container mx-auto p-6">
+        <header class="text-center mb-8">
+            <h1 class="text-4xl font-bold text-blue-600">Diario de Salud Personal</h1>
+            <p class="text-gray-600 mt-2">Registra y analiza tus hábitos diarios de salud</p>
+        </header>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Formulario -->
+            <form id="health-form" class="bg-white shadow-lg rounded-lg p-6">
+                <h2 class="text-2xl font-semibold text-blue-500 mb-4">Registrar un Nuevo Hábito</h2>
+                <div class="mb-4">
+                    <label for="habit" class="block text-sm font-medium text-gray-700">Hábito</label>
+                    <input type="text" id="habit" required class="mt-1 block w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:ring focus:ring-blue-300">
+                </div>
+                <div class="mb-4">
+                    <label for="date" class="block text-sm font-medium text-gray-700">Fecha</label>
+                    <input type="date" id="date" required class="mt-1 block w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:ring focus:ring-blue-300">
+                </div>
+                <div class="mb-4">
+                    <label for="notes" class="block text-sm font-medium text-gray-700">Notas</label>
+                    <textarea id="notes" rows="3" class="mt-1 block w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:ring focus:ring-blue-300"></textarea>
+                </div>
+                <button type="submit" class="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 rounded-md transition duration-200">Agregar Hábito</button>
+            </form>
+
+            <!-- Lista de Hábitos Registrados -->
+            <div id="habits-list" class="bg-white shadow-lg rounded-lg p-6">
+                <h2 class="text-2xl font-semibold text-blue-500 mb-4">Hábitos Registrados</h2>
+                <ul id="habit-items" class="space-y-4"></ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/app.js"></script>
+
+</body>
+
+</html>
